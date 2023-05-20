@@ -1,5 +1,5 @@
 FROM golang:1.20.4-alpine3.18
-RUN apk add --no-cache make bash git
+RUN apk add --no-cache make bash git wine
 RUN addgroup -S golangdocker \
   && adduser -S -u 10000 -g golangdocker golangdocker
 WORKDIR /go/src/app
