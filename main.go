@@ -39,9 +39,10 @@ func main() {
 	}
 
 	signalChannel := make(chan os.Signal, 1)
-	signal.Notify(signalChannel, syscall.SIGINT, syscall.SIGTERM)
+	signal.Notify(signalChannel, syscall.SIGINT, syscall.SIGTERM, syscall.SIGQUIT, syscall.SIGHUP)
 	go func() {
-		<-signalChannel
+		signal := <-signalChannel
+		fmt.Println("Recieved Signal:", signal)
 		fmt.Println("\nShutting down.")
 		// Cleanup here
 		fmt.Println("\nShutdown complete.")
