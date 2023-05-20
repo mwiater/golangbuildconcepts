@@ -27,7 +27,7 @@ done;
 echo -e "${GREENBOLD}...Complete.${RESET}"
 echo ""
 
-echo -e "${CYANBOLD}Building Go app for Windows 64:${RESET} ${GREENBOLD}GOOS=windows GOARCH=amd64 go build -ldflags "-X main.AppReleaseVersion=\$APPRELEASEVERSION" -tags "subscription beta" -o bin/golangbuildconcepts-beta.exe .${RESET}"
+echo -e "${CYANBOLD}Building Win64 Go binary:${RESET} ${GREENBOLD}GOOS=windows GOARCH=amd64 go build -ldflags "-X main.AppReleaseVersion=\$APPRELEASEVERSION" -tags "subscription beta" -o bin/golangbuildconcepts-beta.exe .${RESET}"
 ERROR=$(export APPRELEASEVERSION=$(git rev-list -1 HEAD) && GOOS=windows GOARCH=amd64 go build -ldflags "-X main.AppReleaseVersion=$APPRELEASEVERSION" -tags "subscription beta" -o bin/golangbuildconcepts-beta.exe . 2>&1 1>/dev/null)
 status=$?
 if test $status -ne 0
@@ -39,5 +39,5 @@ then
 fi
 echo ""
 
-echo -e "${GREENBOLD}Complete: Built native go binary.${RESET}"
+echo -e "${GREENBOLD}Complete: Built Win64 go binary.${RESET}"
 echo ""

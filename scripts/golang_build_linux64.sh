@@ -27,7 +27,7 @@ done;
 echo -e "${GREENBOLD}...Complete.${RESET}"
 echo ""
 
-echo -e "${CYANBOLD}Building Go app:${RESET} ${GREENBOLD}go build -ldflags "-X main.AppReleaseVersion=\$APPRELEASEVERSION" -o bin/golangbuildconcepts .${RESET}"
+echo -e "${CYANBOLD}Building native Linux Go binary:${RESET} ${GREENBOLD}go build -ldflags "-X main.AppReleaseVersion=\$APPRELEASEVERSION" -o bin/golangbuildconcepts .${RESET}"
 ERROR=$(export APPRELEASEVERSION=$(git rev-list -1 HEAD) && go build -ldflags "-X main.AppReleaseVersion=$APPRELEASEVERSION" -o bin/golangbuildconcepts . 2>&1 1>/dev/null)
 status=$?
 if test $status -ne 0
@@ -39,5 +39,5 @@ then
 fi
 echo ""
 
-echo -e "${GREENBOLD}Complete: Built native go binary.${RESET}"
+echo -e "${GREENBOLD}Complete: Built native Linux Go binary.${RESET}"
 echo ""

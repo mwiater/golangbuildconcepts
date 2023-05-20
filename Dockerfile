@@ -13,4 +13,5 @@ RUN make golang-build-linux64-subscription
 RUN make golang-build-windows64
 RUN make golang-build-windows64-beta
 RUN make golang-build-windows64-subscription
-ENTRYPOINT ["bash", "scripts/golang_linux_build_tests.sh"]
+RUN winecfg
+ENTRYPOINT ["bash", "scripts/golang_build_tests.sh"]

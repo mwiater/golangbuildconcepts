@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# From root of project, run: `bash scripts/golang_linux_build_tests.sh`
+# From root of project, run: `bash scripts/golang_build_tests.sh`
 
 # Color Console Output
 RESET='\033[0m'           # Text Reset
