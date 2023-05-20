@@ -9,6 +9,7 @@ GREENBOLD='\033[1;32m'    # Green (Bold)
 YELLOWBOLD='\033[1;33m'   # Yellow (Bold)
 CYANBOLD='\033[1;36m'     # Cyan (Bold)
 
+echo ""
 echo -e "${CYANBOLD}Testing Linux Build: ./bin/golangbuildconcepts${RESET}"
 status=$(timeout -s SIGINT 10s ./bin/golangbuildconcepts)
 status=$?
