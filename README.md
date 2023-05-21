@@ -82,7 +82,7 @@ The Dockerfile is doing some heavy lifting, so building the image may take some 
 clear && docker build -t golangbuildconcepts . && \
   docker run -it --rm golangbuildconcepts
 ```
-This will build and run a temporary container, execute the Linux and Windows binaries,and display the output for each for 10 seconds before moving on to the next test. As noted by the example output below, each binary is run for an amount of time (10 seconds), reports the prober "patform", and is terminated successfully by a signal.
+This will build and run a temporary container, execute the Linux and Windows binaries,and display the output for each for 10 seconds before moving on to the next test. As noted by the example output below, each binary is run for an amount of time (10 seconds), reports the proper "platform", and is terminated successfully by a signal.
 
 ```
 Testing Linux Build: ./bin/golangbuildconcepts
