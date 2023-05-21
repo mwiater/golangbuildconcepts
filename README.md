@@ -15,6 +15,26 @@ go get
 
 ## Application
 
+The [article I wrote](
+https://medium.com/@matt.wiater/golang-building-binaries-with-different-features-and-options-from-the-same-codebase-118fef52340b) is based on how changes can be made during the run and build stages, rather than code changes, so **this example app does only one thing: logs the effects of the changes we’re making during the run and build stages.** While worthless as an application that actually does something, for illustration purposes, it has a few benefits:
+
+* Displays the evidence of the build changes via logging when execution commands are modified.
+* Keeps things simple and illustrates the concepts without getting mired down in overly-complex code, yet still gives examples of implementing the changes.
+
+Example output:
+
+```
+{"level":"info","FeatureTier":"subscriptionTier","Feature":"Free Feature #1","time":"2023-05-20T23:30:24Z","message":"Active Feature"}
+{"level":"info","FeatureTier":"subscriptionTier","Feature":"Free Feature #2","time":"2023-05-20T23:30:24Z","message":"Active Feature"}
+{"level":"info","FeatureTier":"subscriptionTier","Feature":"Subscription Tier: Feature #1","time":"2023-05-20T23:30:24Z","message":"Active Feature"}
+{"level":"info","FeatureTier":"subscriptionTier","Feature":"Subscription Tier: Feature #2","time":"2023-05-20T23:30:24Z","message":"Active Feature"}
+{"level":"info","release":"6266e64041311e0d147448c4bace357f77e0f370","platform":"linux","time":"2023-05-20T23:30:25Z","message":"App Tick"}
+{"level":"info","release":"6266e64041311e0d147448c4bace357f77e0f370","platform":"linux","time":"2023-05-20T23:30:26Z","message":"App Tick"}
+{"level":"info","release":"6266e64041311e0d147448c4bace357f77e0f370","platform":"linux","time":"2023-05-20T23:30:27Z","message":"App Tick"}
+{"level":"info","release":"6266e64041311e0d147448c4bace357f77e0f370","platform":"linux","time":"2023-05-20T23:30:28Z","message":"App Tick"}
+{"level":"info","release":"6266e64041311e0d147448c4bace357f77e0f370","platform":"linux","time":"2023-05-20T23:30:29Z","message":"App Tick"}
+```
+
 ### Convenience Commands
 
 **NOTE:** _This repository was created to run on a linux x86 machine. There are example `make` commands and scripts to cross-compile to other architectures, but these convenience methods have only been tested from a linux x86 source (though the corss-compiled binaries have been successfully tested on the appropriate source architectures). If you are on another source architecture, native `go` commands should work fine, but the build scripts included here may not. See the `./scripts` directory to see what the bash scripts are doing--you should be able to infer the native `go` commands for your system, if you have issues executing any of the convenience scripts._
