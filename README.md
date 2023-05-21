@@ -39,6 +39,16 @@ For details on these commands, see the bash scripts in the 'scripts/' directory.
 
 Type: `make golang-run`
 
+Note: This command only runs the the base application with the free tier flag. For details on running the aplication with other flags, see the article: [Golang: Golang: Building Binaries with Different Features and Options from the Same Codebase](
+https://medium.com/@matt.wiater/golang-building-binaries-with-different-features-and-options-from-the-same-codebase-118fef52340b)
+
+Or, build and execute the specific binaries via `make`, e.g.:
+
+Build: `make golang-build-linux64-beta`
+
+Run: `./bin/golangbuildconcepts-beta`
+
+
 ## Bonus: Testing Application Binaries for Different Platforms from the Same Docker Container
 
 As an avid Docker user, I chose to go the container route to test the application binaries. This has a few benefits:
@@ -52,6 +62,7 @@ The Dockerfile is doing some heavy lifting, so building the image may take some 
 clear && docker build -t golangbuildconcepts . && \
   docker run -it --rm golangbuildconcepts
 ```
+This will build and run a temporary container, execute the Linux and Windows binaries,and display the output for each for 10 seconds before moving on to the next test. As noted by the example output below, each binary is run for an amount of time (10 seconds), reports the prober "patform", and is terminated successfully by a signal.
 
 ```
 Testing Linux Build: ./bin/golangbuildconcepts
