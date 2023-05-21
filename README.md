@@ -54,7 +54,7 @@ Run: `./bin/golangbuildconcepts-beta`
 As an avid Docker user, I chose to go the container route to test the application binaries. This has a few benefits:
 
 * A completely clean install and build environment for the application.
-* The ability (via wine) to run both Linux and Windows binaries.
+* The ability (via [Wine](https://www.winehq.org/)) to run both Linux and Windows binaries.
 
 The Dockerfile is doing some heavy lifting, so building the image may take some time, maybe a few minutes.
 
