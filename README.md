@@ -3,7 +3,7 @@
 Learn how to build Golang binaries targeting different platforms and include varying features from the same codebase.
 
 Example application for the article: [Golang: Building Binaries with Different Features and Options from the Same Codebase](
-https://medium.com/@matt.wiater/golang-building-binaries-with-different-features-and-options-from-the-same-codebase-118fef52340b)
+https://betterprogramming.pub/golang-building-binaries-with-different-features-and-options-from-the-same-codebase-118fef52340b)
 
 ## Installation
 
@@ -16,7 +16,7 @@ go get
 ## Application
 
 The [article I wrote](
-https://medium.com/@matt.wiater/golang-building-binaries-with-different-features-and-options-from-the-same-codebase-118fef52340b) is based on how changes can be made during the run and build stages, rather than code changes, so **this example app does only one thing: logs the effects of the changes we’re making during the run and build stages.** While worthless as an application that actually does something, for illustration purposes, it has a few benefits:
+https://betterprogramming.pub/golang-building-binaries-with-different-features-and-options-from-the-same-codebase-118fef52340b) is based on how changes can be made during the run and build stages, rather than code changes, so **this example app does only one thing: logs the effects of the changes we’re making during the run and build stages.** While worthless as an application that actually does something, for illustration purposes, it has a few benefits:
 
 * Displays the evidence of the build changes via logging when execution commands are modified.
 * Keeps things simple and illustrates the concepts without getting mired down in overly-complex code, yet still gives examples of implementing the changes.
@@ -59,8 +59,8 @@ For details on these commands, see the bash scripts in the 'scripts/' directory.
 
 Type: `make golang-run`
 
-Note: This command only runs the the base application with the free tier flag. For details on running the aplication with other flags, see the article: [Golang: Golang: Building Binaries with Different Features and Options from the Same Codebase](
-https://medium.com/@matt.wiater/golang-building-binaries-with-different-features-and-options-from-the-same-codebase-118fef52340b)
+Note: This command only runs the the base application with the free tier flag. For details on running the application with other flags, see the article: [Golang: Golang: Building Binaries with Different Features and Options from the Same Codebase](
+https://betterprogramming.pub/golang-building-binaries-with-different-features-and-options-from-the-same-codebase-118fef52340b)
 
 Or, build and execute the specific binaries via `make`, e.g.:
 
